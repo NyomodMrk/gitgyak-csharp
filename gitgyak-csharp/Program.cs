@@ -11,23 +11,18 @@ namespace gitgyak_csharp
 
         static void egesz_szam()
         {
-            int nagyobb = 0;
-            Console.WriteLine("Adj meg egy egész számot: ");
-            int szam1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Adjon meg egy másik egész számot: ");
-            int szam2 = Convert.ToInt32(Console.ReadLine());
-            if (szam1 > szam2)
+            List<int> lista=new List<int>();
+            int szam;
+            do
             {
-                Console.WriteLine("Az első szám a nagyobb");
-                nagyobb=szam1;
-                Console.WriteLine(nagyobb);
-            }
-            if (szam2 > szam1)
-            {
-                Console.WriteLine("A második szám a nagyobb");
-                nagyobb = szam2;
-                Console.WriteLine(nagyobb);
-            }
+                Console.WriteLine("Adja meg a számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+                if (szam != 0)
+                {
+                    lista.Add(szam);
+                }
+            } while (szam != 0);
+            Console.WriteLine("A legnagyobb szám a felsorolásból a "+lista.Max());
         }
         static void Main(string[] args)
         {
