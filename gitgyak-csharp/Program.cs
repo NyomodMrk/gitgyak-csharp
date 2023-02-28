@@ -22,7 +22,7 @@ namespace gitgyak_csharp
                     lista.Add(szam);
                 }
             } while (szam != 0);
-            Console.WriteLine("A legnagyobb szám a felsorolásból a "+lista.Max());
+            Console.WriteLine("A legnagyobb szám a felsorolásból a "+lista.Max()+"\nA legkisebb szám a felsorolásból a "+lista.Min());
         }
         static void Main(string[] args)
         {
